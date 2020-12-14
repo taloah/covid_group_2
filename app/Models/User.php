@@ -43,18 +43,18 @@ class User extends Authenticatable
     ];
 
 
-  public function patient()
-  {
-    return $this->belongsTo(Patient::class);
-  }
+    public function patient_profile()
+    {
+      return $this->hasOne(Patient::class);
+    }
 
-  public function doctor()
-  {
-    return $this->belongsTo(Doctor::class);
-  }
-  
-  public function roles()
-  {
-    return $this->belongsTo(Rol::class);
-  }
+    public function doctor_profile()
+    {
+      return $this->hasOne(Doctor::class);
+    }
+
+    public function roles()
+    {
+      return $this->belongsTo(Roles::class);
+    }
 }
