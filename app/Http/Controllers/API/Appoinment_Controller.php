@@ -4,8 +4,7 @@ namespace App\Http\Controllers\API;
 use App\Models\Appoinment;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-
-class Appoinments_Controller extends Controller
+class Appoinment_Controller extends Controller
 {
     /**
      * Display a listing of the resource.
