@@ -3,9 +3,8 @@ namespace App\Http\Controllers\API;
 use Illuminate\Http\Request; 
 use App\Http\Controllers\Controller; 
 use App\Models\User; 
-use Illuminate\Support\Facades\Auth; 
-use Illuminate\Support\Facades\Validator; 
-//use Validator;
+use Illuminate\Support\Facades\Auth;
+use Validator;
 class User_Controller extends Controller 
 {
 public $successStatus = 200;
@@ -32,11 +31,13 @@ return response()->json(['error'=>'Unauthorised'], 401);
 public function register(Request $request) 
 { 
 $validator = Validator::make($request->all(), [ 
+'rol_id' => 'required',  
 'name' => 'required', 
 'email' => 'required|email', 
 'password' => 'required',
-'username' => 'required', 
+//'username' => 'required', 
 'c_password' => 'required|same:password', 
+//'rol'=>'required',
 ]);
 if ($validator->fails()) { 
 return response()->json(['error'=>$validator->errors()], 401);            

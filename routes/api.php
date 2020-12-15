@@ -31,5 +31,5 @@ Route::apiResource("/speciality","App\Http\Controllers\API\Speciality_Controller
 Route::post('login', 'App\Http\Controllers\API\User_Controller@login');
 Route::post('register', 'App\Http\Controllers\API\User_Controller@register');
 Route::group(['middleware' => 'auth:api'], function(){
-//Route::post('details', 'App\Http\Controllers\API\UserController@details');
+Route::post('details', 'App\Http\Controllers\API\User_Controller@details');
 });
