@@ -37,6 +37,7 @@ class Patient_Controller extends Controller
         $patient->IESS = $request["IESS"];
         $patient->size = $request["size"];
         $patient->weight = $request["weight"];
+        $patient->vital_signs = $request["vital_signs"];
         $patient->take_medicine = $request["take_medicine"];
         $patient->description_medicine = $request["description_medicine"];
         $patient->save();
